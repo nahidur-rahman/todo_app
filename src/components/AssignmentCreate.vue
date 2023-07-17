@@ -19,7 +19,7 @@ const addAssignment = (event) => {
 
 <template>
   <form @submit.prevent="addAssignment">
-    <div class="border border-gray-200 mx-2 flex justify-between">
+    <div class="border border-gray-200 mx-2 my-1 flex justify-between">
       <input placeholder="New assignment" v-model="newAssignment">
       <button type="submit" class="p-1 px-2 bg-gray-100 place-items-center">Add</button>
     </div>
