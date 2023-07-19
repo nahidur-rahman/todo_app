@@ -24,6 +24,7 @@ function addAssignment(name) {
     }
     lists.value.push(newList)
   }
+
 }
 </script>
 

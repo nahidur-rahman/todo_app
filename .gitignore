@@ -9,6 +9,8 @@ lerna-debug.log*
 
 assets
 
+public
+
 node_modules
 .DS_Store
 dist
@@ -28,3 +30,5 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+
+profile.vue

@@ -1,10 +1,10 @@
 <script setup>
-import { defineEmits, defineProps, ref } from 'vue'
+import {ref } from 'vue'
 
-const props = defineProps({
-  newAssignment: String,
-  addAssignment: Function
-})
+// const props = defineProps({
+//   newAssignment: String,
+//   addAssignment: Function
+// })
 
 
 const emit = defineEmits(['addAssignment']);
