@@ -36,6 +36,6 @@ const inCompleteAssignment = computed(() => {
   <AssignmentList :lists="inCompleteAssignment" title="In Complete" :allList="lists"/><br>
   <AssignmentList :lists="completeAssignment" title="Completed" /><br>
 
-  <assignment-create class="" @adddAssignment="addAssignment"/>
+  <assignment-create class="" @addedAssignment="addAssignment"/>
 
 </template>

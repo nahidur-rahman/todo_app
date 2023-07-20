@@ -1,12 +1,12 @@
 <script setup>
 import { ref } from 'vue'
 
-const emit = defineEmits(['adddAssignment']);
+const emit = defineEmits(['addedAssignment']);
 
 const newAssignment = ref('');
 
 const addAssignment = (event) => {
-  emit('adddAssignment', newAssignment.value);
+  emit('addedAssignment', newAssignment.value);
   newAssignment.value = "";
 };
 </script>
