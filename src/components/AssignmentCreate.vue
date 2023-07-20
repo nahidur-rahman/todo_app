@@ -1,11 +1,5 @@
 <script setup>
-import {ref } from 'vue'
-
-// const props = defineProps({
-//   newAssignment: String,
-//   addAssignment: Function
-// })
-
+import { ref } from 'vue'
 
 const emit = defineEmits(['addAssignment']);
 
@@ -26,6 +20,3 @@ const addAssignment = (event) => {
   </form>
 </template>
 
-<style scoped>
-
-</style>

@@ -18,7 +18,6 @@ const filterAssignment = computed(() => {
   return props.allList.filter(list => list.tag === currentTag.value)
 })
 console.log(filterAssignment)
-// console.log(props.tags)
 </script>
 
 <template>

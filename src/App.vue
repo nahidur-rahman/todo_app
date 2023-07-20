@@ -1,5 +1,5 @@
 <script setup>
-import {computed, ref} from 'vue'
+import { computed, ref } from 'vue'
 import Assignments from "@/components/Assignments.vue";
 
 const lists = ref([
@@ -9,11 +9,9 @@ const lists = ref([
   { name: 'Make projects', complete: false, id: 4, tag: 'JS' },
 ])
 
-// const tags = ref(['Math', 'Physics', 'Chemistry'])
 const tags = computed(() => {
   return [ 'All', ...new Set(lists.value.map(a => a.tag))]
 })
-
 
 function addAssignment(name) {
   if (name.length > 0) {
