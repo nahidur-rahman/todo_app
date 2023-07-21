@@ -1,0 +1,34 @@
+{
+  "assignments": [
+    {
+      "name": "Read documentation",
+      "complete": false,
+      "id": 1,
+      "tag": "Vue"
+    },
+    {
+      "name": "Practice topics",
+      "complete": false,
+      "id": 2,
+      "tag": "Docker"
+    },
+    {
+      "name": "Watch tutorial",
+      "complete": false,
+      "id": 3,
+      "tag": "Vue"
+    },
+    {
+      "name": "Make projects",
+      "complete": false,
+      "id": 4,
+      "tag": "JS"
+    },
+    {
+      "name": "Watched till 12",
+      "complete": true,
+      "id": 4,
+      "tag": "Tutorial"
+    }
+  ]
+}

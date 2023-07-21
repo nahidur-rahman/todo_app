@@ -9,7 +9,6 @@ const props = defineProps({
 })
 
 const currentTag = ref('All')
-console.log(props.allList)
 
 const filterAssignment = computed(() => {
   if (currentTag.value === 'All') {
@@ -17,7 +16,7 @@ const filterAssignment = computed(() => {
   }
   return props.lists.filter(list => list.tag === currentTag.value)
 })
-console.log(filterAssignment)
+
 const tags = computed(() => {
   return [ 'All', ...new Set(props.lists.map(a => a.tag))]
 })
