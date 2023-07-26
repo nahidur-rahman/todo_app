@@ -12,10 +12,11 @@ import AssignmentCreate from "@/components/AssignmentCreate.vue";
 // ])
 
 const lists = ref([])
+const show = ref(true)
 
 onBeforeMount(async () => {
   try {
-    const response = await fetch('http://localhost:3001/assignments');
+    const response = await fetch('http://localhost:5175/assignments');
     lists.value = await response.json()
   } catch (error) {
     console.error('Error fetching assignments:', error);
@@ -43,10 +44,19 @@ const inCompleteAssignment = computed(() => {
 </script>
 
 <template>
-
-  <AssignmentList :lists="inCompleteAssignment" title="In Complete" :allList="lists"/><br>
-  <AssignmentList :lists="completeAssignment" title="Completed" /><br>
-
-  <assignment-create class="" @addedAssignment="addAssignment"/>
+  <div class="flex gap-10">
+    <AssignmentList :lists="inCompleteAssignment" title="In Complete">
+      <assignment-create @addedAssignment="addAssignment"/>
+    </AssignmentList>
+    <br>
+    <AssignmentList
+        v-if="show"
+        :lists="completeAssignment"
+        title="Completed"
+        cross
+        @hide="show = false"
+    />
+    <br>
+  </div>
 
 </template>

@@ -4,11 +4,12 @@ import AssignmentTag from "@/components/AssignmentTag.vue";
 
 const props = defineProps({
   lists: Array,
-  allList: Array,
   title: String,
+  cross: { type: Boolean, default: false}
 })
 
 const currentTag = ref('All')
+// const show = ref(true)
 
 const filterAssignment = computed(() => {
   if (currentTag.value === 'All') {
@@ -23,12 +24,28 @@ const tags = computed(() => {
 </script>
 
 <template>
-  <section v-if="props.lists.length" class="bg-gray-300 border rounded px-4 py-4">
-    <h3 class="font-bold mb-3">{{ props.title }} Assignment ({{ props.lists.length }})</h3>
+  <section v-if="props.lists.length" class="bg-gray-300 border rounded px-4 py-4 w-80">
+    <div class="flex justify-between items-start">
+      <h3
+          class="font-bold mb-3"
+      >
+        {{ props.title }} Assignment ({{ props.lists.length }})
+      </h3>
+
+      <button
+          class="text-2xl mb-2"
+          v-show="cross"
+          @click="$emit('hide')"
+      >
+        &times;
+      </button>
+    </div>
+
 
     <assignment-tag
         v-model:currentTag="currentTag"
         :tags="tags"
+        class="mb-2"
     />
     <ul>
       <li
@@ -41,6 +58,7 @@ const tags = computed(() => {
           </label>
         </li>
     </ul>
+    <slot/>
   </section>
 
 </template>

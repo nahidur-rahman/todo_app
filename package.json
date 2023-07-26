@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "npm run dev & npx json-server db.json -p 3001"
+    "start": "npm run dev & npx json-server db.json -p 5175"
   },
   "dependencies": {
     "vue": "^3.3.4"

@@ -5,7 +5,7 @@ const emit = defineEmits(['addedAssignment']);
 
 const newAssignment = ref('');
 
-const addAssignment = (event) => {
+const addAssignment = () => {
   emit('addedAssignment', newAssignment.value);
   newAssignment.value = "";
 };
@@ -14,9 +14,9 @@ const addAssignment = (event) => {
 <template>
 
   <form @submit.prevent="addAssignment">
-    <div class="border border-gray-200 mx-2 my-2 flex justify-between">
-      <input class="flex-1" placeholder="New assignment" v-model="newAssignment">
-      <button type="submit" class="p-1 px-2 bg-gray-100 place-items-center">Add</button>
+    <div class="border border-gray-500 mx-1 my-3 flex">
+      <input class="flex-1" placeholder="New assignment..." v-model="newAssignment">
+      <button type="submit" class="border border-gray-400 p-1 px-2 bg-green-300 place-items-center">Add</button>
     </div>
   </form>
 </template>
